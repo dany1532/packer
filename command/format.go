@@ -33,7 +33,6 @@ func (c *FormatCommand) Run(args []string) int {
 		return ret
 	}
 
-	// Might need to check for cfg type.
 	return c.RunContext(ctx, cfg)
 }
 
@@ -125,8 +124,8 @@ func (*FormatCommand) AutocompleteFlags() complete.Flags {
 }
 
 // formatFile formats the source context of filename if it is not properly formatted.
-// The output formatFile is written to the STDOUT unless overwrite is true, which saved the
-// formatted source bach to filename.
+// The output formatFile is written to the STDOUT unless overwrite is true, which overwrites
+// the file behind filename with its formatted version.
 func (c *FormatCommand) formatFile(filename string, overwrite bool) error {
 
 	in, err := os.Open(filename)
