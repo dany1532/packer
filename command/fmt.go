@@ -112,7 +112,7 @@ Usage: packer fmt [options] [TEMPLATE]
   be in Packer's HCL2 configuration language; JSON is not supported.
 
 Options:
-  -check=false  Check if the input is formatted. Exit status will be 0 if all
+  -check        Check if the input is formatted. Exit status will be 0 if all
                  input is properly formatted and non-zero otherwise.
 
   -diff         Display diffs of formatting change
