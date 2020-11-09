@@ -45,12 +45,13 @@ func (c *FormatCommand) ParseArgs(args []string) (*FormatArgs, int) {
 		return &cfg, 1
 	}
 
-	// What is Path here?
 	args = flags.Args()
-	if len(args) == 1 {
-		cfg.Path = args[0]
+	if len(args) != 1 {
+		flags.Usage()
+		return &cfg, 1
 	}
 
+	cfg.Path = args[0]
 	return &cfg, 0
 }
 
