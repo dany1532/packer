@@ -75,7 +75,7 @@ source "amazon-ebs" "test" {
 	}
 	defer os.Remove(tf.Name())
 
-	tf.Write([]byte(hcl2data))
+	_, _ = tf.Write([]byte(hcl2data))
 	tf.Close()
 
 	formattedData, err := f.processFile(tf.Name())
@@ -112,7 +112,7 @@ source "amazon-ebs" "test" {
 	}
 	defer os.Remove(tf.Name())
 
-	tf.Write([]byte(data))
+	_, _ = tf.Write([]byte(data))
 	tf.Close()
 
 	formattedData, err := f.processFile(tf.Name())

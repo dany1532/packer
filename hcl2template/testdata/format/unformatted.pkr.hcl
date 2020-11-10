@@ -7,11 +7,11 @@ build {
     ]
 
     provisioner "shell" {
-        string   = coalesce(null, "", "string")
-        int      = "${41 + 1}"
-        int64    = "${42 + 1}"
-        bool     = "true"
-        trilean  = true
+        string  = coalesce(null, "", "string")
+        int     = "${41 + 1}"
+        int64   = "${42 + 1}"
+        bool    = "true"
+        trilean = true
         duration = "${9 + 1}s"
         map_string_string = {
             a = "b"
@@ -28,11 +28,11 @@ build {
         ]
 
         nested {
-            string   = "string"
-            int      = 42
-            int64    = 43
-            bool     = true
-            trilean  = true
+            string  = "string"
+            int     = 42
+            int64   = 43
+            bool    = true
+            trilean = true
             duration = "10s"
             map_string_string = {
                 a = "b"
@@ -54,12 +54,12 @@ build {
     }
 
     provisioner "file" {
-        string   = "string"
-        int      = 42
-        int64    = 43
-        bool     = true
-        trilean  = true
-        duration = "10s"
+        string  = "string"
+        int     = 42
+        int64   = 43
+        bool    = true
+        trilean = true
+        duration          = "10s"
         map_string_string = {
             a = "b"
             c = "d"
@@ -100,7 +100,7 @@ build {
         }
     }
 
-    post-processor "amazon-import" { 
+    post-processor "amazon-import" {
         string   = "string"
         int      = 42
         int64    = 43

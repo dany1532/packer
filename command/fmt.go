@@ -5,14 +5,12 @@ import (
 	"os"
 	"strings"
 
-	"github.com/hashicorp/hcl/v2/hclparse"
 	hclutils "github.com/hashicorp/packer/hcl2template"
 	"github.com/posener/complete"
 )
 
 type FormatCommand struct {
 	Meta
-	parser *hclparse.Parser
 }
 
 func (c *FormatCommand) Run(args []string) int {
